@@ -16,7 +16,7 @@ public class GenericArrayList<Type> {
     }
 
     public Type get(int index) {
-        if (index >= typeArray.length) {
+        if (index >= typeArray.length || index < 0) {
             System.out.println("Invalid index");
             return null;
         }
@@ -28,6 +28,9 @@ public class GenericArrayList<Type> {
     }
 
     public void remove(int index) {
+        if (index >= typeArray.length || index < 0) {
+            System.out.println("Invalid index");
+        }
         Type[] newTypeArray = (Type[]) new Object[typeArray.length-1];
         for (int i = 0; i < index; i++) {
             newTypeArray[i] = typeArray[i];
@@ -45,6 +48,12 @@ public class GenericArrayList<Type> {
             }
         }
         return false;
+    }
+
+    public void printItems() {
+        for (int i = 0; i < typeArray.length; i++) {
+            System.out.println(i + ".: " + typeArray[i]);
+        }
     }
 
 
