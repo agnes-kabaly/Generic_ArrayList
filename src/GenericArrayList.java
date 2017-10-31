@@ -17,7 +17,8 @@ public class GenericArrayList<Type> {
 
     public Type get(int index) {
         if (index >= typeArray.length) {
-            throw new RuntimeException("Invalid index");
+            System.out.println("Invalid index");
+            return null;
         }
         return typeArray[index];
     }
@@ -35,6 +36,15 @@ public class GenericArrayList<Type> {
             newTypeArray[i-1] = typeArray[i];
         }
         typeArray = newTypeArray;
+    }
+
+    public boolean contains(Type item) {
+        for (int i = 0; i < typeArray.length; i++) {
+            if (typeArray[i].equals(item)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 

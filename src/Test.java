@@ -12,11 +12,14 @@ public class Test {
         System.out.println("Size: " + testList.size());
         System.out.println("Get 0.: " + testList.get(0));
         System.out.println("Get 4.: " + testList.get(4));
+        System.out.println("Get 4.: " + testList.get(5));
 
         testList.add(8800);
         System.out.println("Size02.: " + testList.size());
         System.out.println("Get 5.: " + testList.get(5));
 
+        System.out.println(testList.contains(88));
+        System.out.println(testList.contains(8888));
         //testList.remove(4);
 
 
