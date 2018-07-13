@@ -23,7 +23,8 @@ public class Test {
 
         testList.remove(2);
         testList.printItems();
-        //testList.remove(-12);
+        testList.remove(-12);
+        testList.remove(120);
 
     }
 

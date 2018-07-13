@@ -30,6 +30,7 @@ public class GenericArrayList<Type> {
     public void remove(int index) {
         if (index >= typeArray.length || index < 0) {
             System.out.println("Invalid index");
+            return;
         }
         Type[] newTypeArray = (Type[]) new Object[typeArray.length-1];
         for (int i = 0; i < index; i++) {
